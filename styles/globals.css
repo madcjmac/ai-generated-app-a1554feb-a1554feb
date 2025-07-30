@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --glass-bg: rgba(25, 25, 35, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  @apply bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 min-h-screen text-white;
+  background-attachment: fixed;
+}
+
+.glass-effect {
+  @apply backdrop-blur-xl bg-[var(--glass-bg)] border border-[var(--glass-border)];
+}
+
+.nav-item {
+  @apply p-4 flex flex-col items-center gap-1 rounded-xl transition-all hover:bg-white/10;
+}
